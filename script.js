@@ -1,6 +1,8 @@
 let buton = document.getElementById("but");
 let ad = document.getElementById("ad");
 let body = document.querySelector(".container");
+let clearButton = document.getElementById("clearButton");
+let editButton = document.getElementById("editButton");
 let arr = [];
 
 
@@ -16,11 +18,10 @@ buton.addEventListener("click", () => {
     let editButton = document.createElement("button");
     editButton.textContent = "Edit";
     editButton.addEventListener("click", () => {
-        const editedName = prompt("Yeni adı girin:", li.textContent);
-        if (editedName !== null) {
-            li.textContent = editedName;
-            updateLocalStorage();
-        }
+       
+        console.log(li.textContent);
+        // ad.push(li.textContent)
+        
     });
 
     ul.appendChild(editButton);
@@ -39,7 +40,7 @@ buton.addEventListener("click", () => {
     
 });
 
-let clearButton = document.getElementById("clearButton");
+
 
 clearButton.addEventListener("click", () => {
     localStorage.removeItem("data");
